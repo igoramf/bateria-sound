@@ -24,7 +24,11 @@ const playSound = (key) =>{
     }
 }
 
-btn.addEventListener(`click`, () =>{
+input.addEventListener(`keydown`, (e)=> {
+    e.stopPropagation();
+})
+
+btn.addEventListener(`click`, () =>{  
     let value = input.value;
     playComposition(value);
 })
