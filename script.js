@@ -1,4 +1,4 @@
-let key = ``
+let key = ``;
 const input = document.querySelector('#input');
 const btn = document.querySelector('button');
 
@@ -9,11 +9,11 @@ document.body.addEventListener('keydown', (e) => {
 
 const playSound = (key) =>{
     let audio = document.querySelector(`#s_key${key}`);
-    let keyBox = document.querySelector(`div[data-key="key${key}"]`)
+    let keyBox = document.querySelector(`div[data-key="key${key}"]`);
     
     if(audio){
         audio.currentTime = 0;
-        audio.play()
+        audio.play();
     }
 
     if(keyBox){
@@ -26,7 +26,7 @@ const playSound = (key) =>{
 
 btn.addEventListener(`click`, () =>{
     let value = input.value;
-    playComposition(value)
+    playComposition(value);
 })
 
 function playComposition(song){
@@ -36,7 +36,7 @@ function playComposition(song){
         setTimeout(()=>{
             playSound(song[i])
         }, wait);
+
         wait += 250;
-        
     }
 }
